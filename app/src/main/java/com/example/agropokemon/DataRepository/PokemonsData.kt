@@ -9,7 +9,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Bulbasaur",
         weight = 69,
         height = 7,
-        types = listOf("Grass","Poison"),
         baseExperience = 64,
         image = R.drawable.pok1
     ),
@@ -18,7 +17,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Ivysaur",
         weight = 130,
         height = 10,
-        types = listOf("Grass","Poison"),
         baseExperience = 142,
         image = R.drawable.pok2
     ),
@@ -27,7 +25,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Venusaur",
         weight = 1000,
         height = 20,
-        types = listOf("Grass","Poison"),
         baseExperience = 263,
         image = R.drawable.pok3
     ),
@@ -36,7 +33,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Charmander",
         weight = 85,
         height = 6,
-        types = listOf("Fire"),
         baseExperience = 52,
         image = R.drawable.pok4
     ),
@@ -46,7 +42,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Charmeleon",
         weight = 190,
         height = 11,
-        types = listOf("Fire"),
         baseExperience = 142,
         image = R.drawable.pok5
     ),
@@ -55,7 +50,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Charizard",
         weight = 905,
         height = 17,
-        types = listOf("Fire", "Flying"),
         baseExperience = 267,
         image = R.drawable.pok6
     ),
@@ -65,7 +59,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Squirtle",
         weight = 90,
         height = 5,
-        types = listOf("Water"),
         baseExperience = 63,
         image = R.drawable.pok7
     ),
@@ -74,7 +67,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Wartortle",
         weight = 855,
         height = 10,
-        types = listOf("Water"),
         baseExperience = 142,
         image = R.drawable.pok8
     ),
@@ -83,7 +75,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Blastoise",
         weight = 855,
         height = 16,
-        types = listOf("Water"),
         baseExperience = 265,
         image = R.drawable.pok9
     ),
@@ -92,7 +83,6 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
         name = "Caterpie",
         weight = 29,
         height = 3,
-        types = listOf("Bug"),
         baseExperience = 39,
         image = R.drawable.pok10
     ),

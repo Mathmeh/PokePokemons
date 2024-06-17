@@ -27,6 +27,7 @@ class CustomAdapter(context: Context, private val pokemonList: List<Pokemon>) : 
             return position.toLong()
         }
 
+
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val view = convertView ?: inflater.inflate(R.layout.list_item, parent, false)
 
@@ -40,4 +41,5 @@ class CustomAdapter(context: Context, private val pokemonList: List<Pokemon>) : 
 
             return view
         }
+
     }

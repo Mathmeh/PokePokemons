@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/system_accent3_50"
+    android:background="@color/design_default_color_secondary"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context=".MainActivity">
