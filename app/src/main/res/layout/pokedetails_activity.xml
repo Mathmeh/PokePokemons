@@ -13,7 +13,7 @@
         android:paddingBottom="32dp">
 
         <TextView
-            android:id="@+id/name_textView"
+            android:id="@+id/name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -21,13 +21,13 @@
             android:fontFamily="@font/aldrich"
             android:text="Bulbazavr"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toTopOf="@+id/poke_image_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/poke_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
@@ -38,7 +38,7 @@
             app:srcCompat="@drawable/pok1" />
 
         <TextView
-            android:id="@+id/weight_textView"
+            android:id="@+id/weight_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="64dp"
@@ -50,10 +50,10 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/poke_image_view" />
 
         <TextView
-            android:id="@+id/height_textView"
+            android:id="@+id/height_text_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="64dp"
@@ -65,21 +65,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weight_textView"
+            app:layout_constraintTop_toBottomOf="@+id/weight_text_view"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
-            android:id="@+id/exp_star_imageView"
+            android:id="@+id/exp_star_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="132dp"
             android:layout_marginTop="60dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/height_textView"
+            app:layout_constraintTop_toBottomOf="@+id/height_text_view"
             app:srcCompat="@android:drawable/btn_star_big_on" />
 
         <TextView
-            android:id="@+id/exp_textView"
+            android:id="@+id/exp_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
@@ -88,8 +88,8 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.086"
-            app:layout_constraintStart_toEndOf="@+id/exp_star_imageView"
-            app:layout_constraintTop_toBottomOf="@+id/height_textView" />
+            app:layout_constraintStart_toEndOf="@+id/exp_star_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/height_text_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

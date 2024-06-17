@@ -16,8 +16,7 @@ class PokeDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = PokedetailsActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-            //@font/aldrich
-        //Font
+
         val pokemonId = intent.extras?.getInt("poke_id", -1)
 
         if (pokemonId != null && pokemonId!=-1) {
@@ -37,7 +36,7 @@ class PokeDetailsActivity : AppCompatActivity() {
 
     fun setPokeData(binding: PokedetailsActivityBinding, pokemon: Pokemon){
 
-        binding.imageView.setImageResource(pokemon.image)
+        binding.pokeImageView.setImageResource(pokemon.image)
         binding.expTextView.text ="EXP "+pokemon.baseExperience
         binding.nameTextView.text = pokemon.name
         binding.heightTextView.text = "Height: "+pokemon.height

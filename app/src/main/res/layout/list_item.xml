@@ -15,7 +15,7 @@
         android:src="@drawable/pok1" />
 
     <TextView
-        android:id="@+id/pok_name_textView"
+        android:id="@+id/pok_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"

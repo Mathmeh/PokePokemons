@@ -13,7 +13,7 @@ import com.example.agropokemon.R
 
 class CustomAdapter(context: Context, private val pokemonList: List<Pokemon>) : BaseAdapter() {
 
-        private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        private val inflater: LayoutInflater = LayoutInflater.from(context)
 
         override fun getCount(): Int {
             return pokemonList.size
@@ -33,7 +33,7 @@ class CustomAdapter(context: Context, private val pokemonList: List<Pokemon>) : 
 
             val pokemon = pokemonList[position]
 
-            val nameTextView = view.findViewById<TextView>(R.id.pok_name_textView)
+            val nameTextView = view.findViewById<TextView>(R.id.pok_name_text_view)
             val imageView = view.findViewById<ImageView>(R.id.image_view_icon)
 
             nameTextView.text = pokemon.name
