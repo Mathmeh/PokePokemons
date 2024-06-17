@@ -3,7 +3,7 @@ package com.example.agropokemon.DataRepository
 import com.example.agropokemon.Models.Pokemon
 import com.example.agropokemon.R
 
-private val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
+val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
     Pokemon(
         id = 1,
         name = "Bulbasaur",
@@ -99,3 +99,13 @@ private val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
 
 
 ).associateBy { it.id })
+fun getAllPokemonNames(): List<String> {
+    var names : List<String> = listOf()
+    pokemons.forEach{ (id, pokemon)->
+        names+=pokemon.name
+    }
+    return names
+}
+fun getAllPokemons(): MutableCollection<Pokemon> {
+    return pokemons.values
+}

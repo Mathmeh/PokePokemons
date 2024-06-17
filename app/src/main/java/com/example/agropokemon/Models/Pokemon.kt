@@ -1,6 +1,6 @@
 package com.example.agropokemon.Models
 
-data class Pokemon(
+class Pokemon(
     val id: Int,
     val name: String,
     val types: List<String>,
@@ -9,3 +9,8 @@ data class Pokemon(
     val baseExperience: Int,
     val image: Int
 )
+{
+    override fun toString(): String {
+        return name
+    }
+}
