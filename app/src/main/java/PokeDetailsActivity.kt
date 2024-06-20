@@ -18,29 +18,23 @@ class PokeDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val pokemonId = intent.extras?.getInt("poke_id", -1)
+        val pokemon = pokemons.get(pokemonId)
 
-        if (pokemonId != null && pokemonId!=-1) {
-
-             var  pokemon = pokemons.get(pokemonId)
-
-             if (pokemon != null) {
-                setPokeData(binding, pokemon)
-             } else {
-                 pokemonMissed()
-             }
-
-        } else {
+        pokemon?.let {
+            setPokeData(binding, pokemon)
+        } ?: run {
             pokemonMissed()
         }
     }
 
     fun setPokeData(binding: PokedetailsActivityBinding, pokemon: Pokemon){
-
-        binding.pokeImageView.setImageResource(pokemon.image)
-        binding.expTextView.text ="EXP "+pokemon.baseExperience
-        binding.nameTextView.text = pokemon.name
-        binding.heightTextView.text = "Height: "+pokemon.height
-        binding.weightTextView.text = "Weight: "+pokemon.weight
+        with(binding) {
+            pokeImageView.setImageResource(pokemon.image)
+            expTextView.text ="EXP ${pokemon.baseExperience}"
+            nameTextView.text = pokemon.name
+            heightTextView.text = "Height: ${pokemon.height}"
+            weightTextView.text = "Weight: ${pokemon.weight}"
+        }
     }
 
     fun pokemonMissed(){

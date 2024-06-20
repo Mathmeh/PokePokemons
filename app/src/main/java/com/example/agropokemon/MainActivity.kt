@@ -3,9 +3,12 @@ package com.example.agropokemon
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.agropokemon.DataRepository.getAllPokemons
-import com.example.agropokemon.Utils.CustomAdapter
+import com.example.agropokemon.DataRepository.pokemons
+import com.example.agropokemon.Models.Pokemon
 import com.example.agropokemon.databinding.ActivityMainBinding
 
 
@@ -16,19 +19,29 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val adapter = CustomAdapter(this@MainActivity, getAllPokemons().toList())
-        binding.pokemonListView.adapter = adapter
-
-
-        binding.pokemonListView.setOnItemClickListener { parent, view, position, id ->
-
-            val element = adapter.getItem(position)
-
-            val intent = Intent(this@MainActivity, PokeDetailsActivity::class.java).apply {
-                putExtra("poke_id", position+1)
-
+        pokemons.forEach {
+            setPokemon(binding, it.value)
         }
-            startActivity(intent)
-    }
+
   }
+
+    private fun setPokemon(binding: ActivityMainBinding, pokemon: Pokemon) {
+        val inflater = LayoutInflater.from(this)
+        val view = inflater.inflate(R.layout.list_item, null)
+
+        val img = view.findViewById<ImageView>(R.id.image_view_icon)
+        val name = view.findViewById<TextView>(R.id.pok_name_text_view)
+
+        img.setImageResource(pokemon.image)
+        name.text = pokemon.name
+
+        view.setOnClickListener{
+            val intent = Intent(this@MainActivity, PokeDetailsActivity::class.java).apply {
+                putExtra("poke_id", pokemon.id)
+            }
+            startActivity(intent)
+        }
+
+        binding.pokelistLinear?.addView(view)
+    }
 }
