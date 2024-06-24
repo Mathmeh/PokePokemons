@@ -88,14 +88,16 @@ val pokemons: HashMap<Int, Pokemon> = HashMap(listOf(
     ),
 
 
-).associateBy { it.id })
+    ).associateBy { it.id })
+
 fun getAllPokemonNames(): List<String> {
-    var names : List<String> = listOf()
-    pokemons.forEach{ (id, pokemon)->
-        names+=pokemon.name
+    var names: List<String> = listOf()
+    pokemons.forEach { (id, pokemon) ->
+        names += pokemon.name
     }
     return names
 }
+
 fun getAllPokemons(): MutableCollection<Pokemon> {
     return pokemons.values
 }

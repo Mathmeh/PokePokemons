@@ -16,28 +16,34 @@ import com.example.agropokemon.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var  binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val adapter = RecyclerAdapter()
-        adapter.onClickFun = {
-            pokemon -> setPokemon(pokemon)
+        adapter.onClickFun = { pokemon ->
+            setPokemon(pokemon)
         }
 
-            binding.pokemonsRecyclerView?.adapter = adapter
-            adapter.submit(getAllPokemons().toList())
-            binding.pokemonsRecyclerView?.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-            binding.pokemonsRecyclerView?.addItemDecoration(DividerItemDecoration(baseContext, VERTICAL))
-  }
+        binding.pokemonsRecyclerView?.adapter = adapter
+        adapter.submit(getAllPokemons().toList())
+        binding.pokemonsRecyclerView?.layoutManager =
+            LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        binding.pokemonsRecyclerView?.addItemDecoration(
+            DividerItemDecoration(
+                baseContext,
+                VERTICAL
+            )
+        )
+    }
 
     private fun setPokemon(pokemon: Pokemon) {
 
-            val intent = Intent(this@MainActivity, PokeDetailsActivity::class.java).apply {
-                putExtra("poke_id", pokemon.id)
-            }
-            startActivity(intent)
+        val intent = Intent(this@MainActivity, PokeDetailsActivity::class.java).apply {
+            putExtra("poke_id", pokemon.id)
         }
+        startActivity(intent)
     }
+}

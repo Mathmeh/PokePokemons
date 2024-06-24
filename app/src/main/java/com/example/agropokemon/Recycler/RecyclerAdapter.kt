@@ -9,15 +9,20 @@ import com.example.agropokemon.databinding.ListItemBinding
 
 
 class RecyclerAdapter
-    :RecyclerView.Adapter<PokemonViewHolder>() {
+    : RecyclerView.Adapter<PokemonViewHolder>() {
 
     private var pokeList = listOf<Pokemon>()
     var onClickFun: (Pokemon) -> Unit = {}
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : PokemonViewHolder{
-        return PokemonViewHolder( ListItemBinding.inflate(LayoutInflater.from(parent.context),
-            parent, false),
-            onClickFun )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
+        return PokemonViewHolder(
+            ListItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent, false
+            ),
+            onClickFun
+        )
     }
+
 
     override fun getItemCount(): Int {
         return pokeList.size

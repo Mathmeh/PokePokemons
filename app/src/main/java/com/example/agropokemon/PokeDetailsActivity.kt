@@ -10,7 +10,7 @@ import com.example.agropokemon.databinding.PokedetailsActivityBinding
 
 
 class PokeDetailsActivity : AppCompatActivity() {
-    private lateinit var  binding: PokedetailsActivityBinding
+    private lateinit var binding: PokedetailsActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +27,10 @@ class PokeDetailsActivity : AppCompatActivity() {
         }
     }
 
-    fun setPokeData(binding: PokedetailsActivityBinding, pokemon: Pokemon){
+    fun setPokeData(binding: PokedetailsActivityBinding, pokemon: Pokemon) {
         with(binding) {
             pokeImageView.setImageResource(pokemon.image)
-            expTextView.text ="EXP ${pokemon.baseExperience}"
+            expTextView.text = "EXP ${pokemon.baseExperience}"
             nameTextView.text = pokemon.name
             heightTextView.text = "Height: ${pokemon.height}"
             weightTextView.text = "Weight: ${pokemon.weight}"
@@ -38,7 +38,7 @@ class PokeDetailsActivity : AppCompatActivity() {
         }
     }
 
-    fun pokemonMissed(){
+    fun pokemonMissed() {
         Log.e("MissError", "This creature is missing!!!");
         Toast.makeText(this, "This creature is missing!!!", Toast.LENGTH_SHORT)
     }
