@@ -11,16 +11,8 @@
     android:paddingRight="16dp"
     tools:context=".MainActivity" >
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokemons_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <LinearLayout
-            android:id="@+id/pokelist_linear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"></LinearLayout>
-    </ScrollView>
-
+        android:layout_height="match_parent" />
 </LinearLayout>

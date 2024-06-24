@@ -1,4 +1,4 @@
-package com.example.agropokemon
+package com.example.agropokemon.com.example.agropokemon
 
 import android.os.Bundle
 import android.util.Log
@@ -34,6 +34,7 @@ class PokeDetailsActivity : AppCompatActivity() {
             nameTextView.text = pokemon.name
             heightTextView.text = "Height: ${pokemon.height}"
             weightTextView.text = "Weight: ${pokemon.weight}"
+
         }
     }
 
