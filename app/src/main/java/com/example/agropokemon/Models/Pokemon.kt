@@ -10,8 +10,7 @@ class Pokemon(
     val baseExperience: Int,
     @DrawableRes
     val image: Int
-)
-{
+) {
     override fun toString(): String {
         return name
     }

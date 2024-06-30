@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="PokeDetailsActivity"
+            android:name=".com.example.agropokemon.PokeDetailsActivity"
             android:exported="false"
         />
         <meta-data
