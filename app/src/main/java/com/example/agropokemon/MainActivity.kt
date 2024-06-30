@@ -5,8 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.example.agropokemon.DataRepository.getAllPokemons
 import com.example.agropokemon.Models.Pokemon
@@ -26,12 +24,9 @@ class MainActivity : AppCompatActivity() {
         adapter.onClickFun = { pokemon ->
             setPokemon(pokemon)
         }
-
-        binding.pokemonsRecyclerView?.adapter = adapter
+        binding.recyclerView.adapter = adapter
         adapter.submit(getAllPokemons().toList())
-        binding.pokemonsRecyclerView?.layoutManager =
-            LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        binding.pokemonsRecyclerView?.addItemDecoration(
+        binding.recyclerView.addItemDecoration(
             DividerItemDecoration(
                 baseContext,
                 VERTICAL

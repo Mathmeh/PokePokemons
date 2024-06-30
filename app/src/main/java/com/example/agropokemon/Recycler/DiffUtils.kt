@@ -16,10 +16,10 @@ class DiffUtils(
     }
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition + 1].id == newList[newItemPosition + 1].id
+        return oldList[oldItemPosition].id == newList[newItemPosition].id
     }
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition + 1] == newList[newItemPosition + 1]
+        return oldList[oldItemPosition] == newList[newItemPosition]
     }
 }
